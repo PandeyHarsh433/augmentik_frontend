@@ -9,13 +9,17 @@ const Home = () => {
   const [cardData, setCardData] = useState([]);
 
   const getHeroData = async () => {
-    const response = await axios.get("http://localhost:8000/app/about");
+    const response = await axios.get(
+      "https://cyan-proud-turkey.cyclic.cloud/app/about"
+    );
     const data = await response.data;
     setHeroData(data);
   };
 
   const getCardData = async () => {
-    const response = await axios.get("http://localhost:8000/cards");
+    const response = await axios.get(
+      "https://cyan-proud-turkey.cyclic.cloud/cards"
+    );
     const data = await response.data;
     setCardData(data);
   };
